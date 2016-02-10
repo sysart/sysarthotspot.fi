@@ -61,6 +61,7 @@
          <h1>Sysart Hotspot</h1>
 
          <div id="navigation">
+             <span id="2016-1">2016 Helmikuu</span>
              <span id="2011">2011</span>
              <span id="2010-2">2010 Syksy</span>
              <span id="2010-1">2010 Kevät</span>
@@ -68,6 +69,73 @@
 
 
          <div id="content">
+
+             <div class="2016-1">
+                 <h2>Integroinnin haasteet: Tosielämän tetristä</h2>
+
+                 <p>
+                   Päätimme jatkaa Sysart Hotspot perinnettä järjestämällä pienimuotoisen keskustelufoorumin
+                   integraatioiden haasteista. Otsikkona tapahtumalla oli "Integroinnin haasteet: Tosielämän
+                   tetristä kompleksisten Intranet-/Internet-järjestelmien parissa". Paikalle saapui
+                   asiantunteva osanottajajoukko edustaen yrityksiä jotka tekevät haastavia integraatioita
+                   sisältäviä tuotteita ja projekteja.
+                 </p>
+
+                 <p>
+                     Marko Oikarinen ja Jyrki Puttonen alustivat keskustelua esittelemällä erilaisia ongelmia
+                     joihin tosielämässä on törmätty. Asiaa lähestyttiin erilaisista näkökulmista kuten:
+                     <ul>
+                        <li>Kokonaisuuden suunnittelu</li>
+                        <li>Kehittämisen haasteita</li>
+                        <li>Testaamisen haasteita</li>
+                        <li>Resiliency / Vastustuskyky</li>
+                        <li>Deployment</li>
+                        <li>Ongelmien ratkaisu tuotannossa</li>
+                    </ul>
+                 </p>
+                 
+                 <p>
+                     Yhdeksi pääteemaksi keskustelussa nousi tiedon merkityksen muuttuminen ja vääristyminen.
+                     Tiedettiin tapauksia joissa tiedon merkitys vaihtuu (“nimi” tarkoitti ennen etunimeä, nyt
+                     koko nimeä). Todettiin myös että tiedon merkitys voi muuttua syvemmälläkin tasolla. Kun asiat
+                     halutaan mallintaa omalle palikalle järkevimmällä tavalla tarvitaan usein ns. "anti-corruption
+                     layer". Koko maailmaa ei ole mahdollista tehdä optimaaliseksi joten pidetään oma keskeisin
+                     tontti puhtaana. Context mapping on yksi työkalu integroidun kokonaisuuden ymmärtämiseen:
+                     <a href="https://www.youtube.com/watch?v=yPvef9R3k-M">Eric Evans / GOTO Berlin 2015</a>
+                 </p>
+                 
+                 <p>
+                     Huonolaatuinen tai epäkelpo data ja sen käsittely herätti myös paljon keskustelua. Erilaisia paikkoja joista käyttäjä voi syöttää tietoja on paljon. Integraation kautta tuleva tieto ei ole välttämättä kunnolla validoitu lähdejärjestelmässä. Konfiguraatioparametritkin ovat käyttäjän syötteitä (admin on myös käyttäjä).
+                 </p>
+                 
+                 <p>
+                     Pohdittiin pitäisikö järjestelmän räjähtää näyttävästi heti kun tulee virheellistä dataa jotta vältytään sen levittämiseltä? Tämä nopeuttaa integraatio-ongelmien löytämistä. Mutta miten hoidetaan tilanne jossa sama, mahdollisesti virheellinen data menee myös muille, ulkopuolisille järjestelmille, jolloin oma järjestelmä jää ilman kyseistä tietoa? Järjestelmä joka on ollut vuosia käytössä pitää todennäköisesti sisällään epäkelpoa dataa ja kun tähän integroidaan uusia osia, joudutaan huonon datan ongelmalle tekemään jotain. Mahdollisia ratkaisuvaihtoehtoja ovat ainakin datan siivous tai vaihtoehtoisesti epäkelvon datan kanssa eläminen ottamalla se huomioon mallinnuksessa.
+                 </p>
+                     
+                 <p>
+                     Soveltuuko <a href="https://en.wikipedia.org/wiki/Robustness_principle">Robustness principle</a> integraatioihin? Periaate on peräisin internetin alkuajoilta kun oli vaikeuksia saada matalan tason verkkoprotokollat toimimaan eri pelureiden kesken. Robustness principle sanoo: "code that receives input should accept non-conformant input <b>as long as the meaning is clear</b>". Toisaalta, miksi hyväksyä edes osittain viallisia syötteitä? Viallinen syötehän on oire lähettävässä järjestelmässä olevasta bugista. Kehitys ja testausvaiheessa validointi voi olla tarkempaa jotta ongelmat löydetään nopeasti. On helpompaa pitää ensin tiukka linja syötteiden suhteen ja höllentää tarvittaessa kuin toisinpäin.
+                 </p>
+                 
+                 <p>
+                     Työkaluksi rajapintojen oikean toiminnan varmistamiseen mainittiin
+                     <a href="https://www.thoughtworks.com/radar/techniques/consumer-driven-contract-testing">consumer-driven contract testing</a>.
+                     Keskustelussa todettiin että tämä onnistuu kyllä oman talon sisällä. Hankalampaa on kun palveluiden omistajat ovat eri yrityksiä.
+                 </p>
+                 
+                 <p>
+                     Juttelimme myös siitä, miten integroituja kokonaisuuksia saadaan kasattua testi ja koulutuskäyttöä varten. Yleensä kokonaisuus sisältää muutamia hankalia palikoita joita ei vain ole mahdollista saada testiympäristöön (lisenssit, asennuksen vaikeus, tms.). Tällaisissa tapauksissa voidaan käyttää ns. mock-toteutusta kyseisestä palikasta (toim. huom: korrektimpi termi olisi "fake"). Mock-toteutuksia voidaan käyttää muuhunkin kuin testaamiseen. Eräässä tapauksessa tehtiin alunperin testaustarkoitukseen luotuun mock-palveluun vain pari pientä lisäystä jolloin se kelpasi koulutusympäristön tarpeisiin ja käyttäjille saatiin kokonaisuus käyttäytymään oikealla tavalla.
+                 </p>
+                     
+                 <p>
+                     Valtuutusten, roolien ja tunnistautumisen hallinta eri järjestelmien välillä on muodostumassa ongelmaksi.
+                     Valtuutuksilla tarkoitetaan tilannetta, jossa toinen toimija valtuutetaan tekemään asioita käyttäjän
+                     puolelta. Tämä tilanne on hyvin yleinen viranomaisten kanssa toimiessa. Kansallinen palveluarkkitehtuuri
+                     sisältää roolien ja valtuutuksien hallinnan, mutta kokemusten mukaan tämä on hankala käyttää.
+                     <a href="http://vm.fi/roolit-ja-valtuudet">Valtiovarainministeriö / Roolit ja valtuudet</a>
+                 </p>    
+             </div>
+
+
              <div class="2011">
                  <h2>Venkat Subramaniam</h2>
 
