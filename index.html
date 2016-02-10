@@ -1,0 +1,304 @@
+<!doctype html>
+<html>
+
+	<head>
+		<meta charset="utf-8"/>
+		<title>Sysart Hotspot</title>
+        <link rel="stylesheet" media="all" href="css/site.css"/>
+		<meta name="viewport" content="width=device-width, initial-scale=1"/>
+        <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+        <meta http-equiv="cache-control" content="no-cache" />
+        <meta http-equiv="Expires" content="0" />
+	</head>
+
+	<body lang="fi">
+    <script src="js/jquery-1.6.2.min.js"></script>
+     <script>
+
+     $(document).ready(function(){
+
+       function activate(active) {
+         $("#navigation").children().removeClass("active");
+         $("#" + active).addClass("active");
+
+         $("#content").children().hide();
+         $("#content ." + active).fadeIn();
+       }
+
+       $("#navigation").children().click(function(){
+           activate($(this).attr("id"));
+       });
+
+       $("#navigation").children().hover(function() {
+           $(this).toggleClass("hover");
+       });
+
+       activate($("#navigation").children().first().attr("id"));
+
+       
+     });
+   </script>
+    <script type="text/javascript">
+
+      var _gaq = _gaq || [];
+      _gaq.push(['_setAccount', 'UA-1384247-3']);
+      _gaq.push(['_trackPageview']);
+
+      (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+      })();
+
+    </script>
+
+    
+     <div id="rekry">
+         <a href="http://www.sysart.fi/ihmiset-ura/sysart-tyoepaikkana"><img src="images/rekry.gif" alt=""/></a>
+     </div>
+
+     <div id="site">
+         <h1>Sysart Hotspot</h1>
+
+         <div id="navigation">
+             <span id="2011">2011</span>
+             <span id="2010-2">2010 Syksy</span>
+             <span id="2010-1">2010 Kevät</span>
+         </div>
+
+
+         <div id="content">
+             <div class="2011">
+                 <h2>Venkat Subramaniam</h2>
+
+                 <div class="image-container right">
+                     <img src="images/venkatsubramaniam.jpg" alt="Venkat Subramaniam"/>
+
+                     <div class="title">Venkat Subramaniam</div>
+                 </div>
+
+                 <p>
+                     Sysart on kutsunut Venkat Subramaniamin Helsinkiin 2.11.2011. Tämän vuoden Hotspotissa aiheena on
+                     funktionaalinen ohjelmointi. Ohjelmassa on esitys suunnittelumalleista moderneilla JVM-pohjaisilla
+                     kielillä ja workshop funktionaalisesta ohjelmoinnista. Tapahtuma järjestetään
+                     <a href="http://www.scandichotels.fi/simonkentta">Scandic Simonkentän</a> Mansku kokoustilassa
+                     osoitteessa Simonkatu 9.
+                 </p>
+
+                 <p>
+                     Lisää kouluttajana ja konsulttina tunnetusta Subramaniamista löydät hänen
+                     <a href="http://www.agiledeveloper.com/">Agile Developer</a> yrityksen sivuilta ja
+                     <a href="https://twitter.com/#!/venkat_s">Twitteristä</a>.
+                 </p>
+
+                 <h3>Ohjelma</h3>
+                 <p>
+                     12:00 Tilaisuuden avaus ja kahvi<br/>
+                     12:05 Design Patterns in Modern JVM Languages presentation<br/>
+                     13:30 Iltapäiväkahvi<br/>
+                     14:00 Programming in Functional Style workshop<br/>
+                 </p>
+
+                 <p class="quote">
+                     The GOF design patterns were quite centered around OOP languages. Now that we have dynamic and
+                     functional languages on the JVM, there are quite a few other patterns that come in handy with these
+                     capabilities. In this presentation we will explore patterns that allow us to make better use of
+                     closures and functional style of programming.
+                 </p>
+
+                 <p class="quote">
+                     Functional programming has been around for a while, however, they have sharply raised to prominence
+                     on the JVM with the emergence of languages like Scala, Clojure, Groovy, and JRuby. Programming in
+                     functional style is not about picking a set of syntax, it is thinking in a particular idiomatic
+                     style and programming using a set of constructs. One of the better way to learn this is by doing
+                     it. In this workshop, we will take ten different tasks, discuss how to do them with the
+                     all-too-familiar imperative style and then how to program it using functional style. We will then
+                     implement our design for each task using a language that provides functional style of programming
+                     on the JVM.
+                 </p>
+
+                 <p>Workshoppia varten on hyvä ottaa oma kannettava tietokone matkaan. Asenna myös JDK ja Groovy, Scala
+                     tai Clojure ympäristö. Suosittelemme käyttämään Scalaa. Seuraa myös
+                     <a href="https://twitter.com/#!/SysartHotspot">@SysartHotspot twitter-tiliä</a> saadaksesi
+                     viimeisimmät tiedot.</p>
+
+
+                 <h3>Ilmoittautuminen</h3>
+                 <p>
+                     Tapahtuma on loppuunmyyty, mutta voit edelleen ilmoittautua mahdollisille peruutuspaikoille lähettämällä sähköpostia
+                     <a href="mailto:ilmoittautuminen@sysarthotspot.fi?subject=Hotspot%20ilmoittautuminen">ilmoittautuminen@sysarthotspot.fi</a>
+                     28.10.2011 klo 16.00 mennessä. Tilaisuus on ilmainen, mutta perimme 50 euron maksun
+                     kaikilta poisjäänneiltä, joista ei ole ilmoitettu 1.11.2011 klo 12.00 mennessä.
+                 </p>
+
+                 <h3>Sijainti</h3>
+                 
+                 <iframe width="890" height="400" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="http://maps.google.com/maps?f=q&amp;source=s_q&amp;hl=fi&amp;geocode=&amp;q=Scandic+Simonkentt%C3%A4,+Simonkatu,+Helsinki,+Finland&amp;aq=0&amp;sll=37.0625,-95.677068&amp;sspn=67.713932,135.263672&amp;vpsrc=6&amp;ie=UTF8&amp;hq=Scandic+Simonkentt%C3%A4,+Simonkatu,+Helsinki,+Finland&amp;ll=60.171745,24.936991&amp;spn=0.008538,0.038152&amp;z=15&amp;iwloc=A&amp;output=embed"></iframe><br /><small><a href="http://maps.google.com/maps?f=q&amp;source=embed&amp;hl=fi&amp;geocode=&amp;q=Scandic+Simonkentt%C3%A4,+Simonkatu,+Helsinki,+Finland&amp;aq=0&amp;sll=37.0625,-95.677068&amp;sspn=67.713932,135.263672&amp;vpsrc=6&amp;ie=UTF8&amp;hq=Scandic+Simonkentt%C3%A4,+Simonkatu,+Helsinki,+Finland&amp;ll=60.171745,24.936991&amp;spn=0.008538,0.038152&amp;z=15&amp;iwloc=A" style="color:#0000FF;text-align:left">Näytä suurempi kartta</a></small>
+                 <p>Scandic Simonkenttä, Mansku kokoustila<br/>
+                     Simonkatu 9, Helsinki</p>
+
+                 <h3>Katso myös</h3>
+
+                 <div class="fb">
+                     <div id="fb-root"></div>
+                     <script src="http://connect.facebook.net/en_US/all.js#xfbml=1"></script>
+                     <fb:like href="http://www.sysarthotspot.fi" send="false" width="500" show_faces="false"
+                              action="like"
+                              font=""></fb:like>
+                 </div>
+                 <div class="twitter">
+                     <a href="http://twitter.com/share" class="twitter-share-button" data-url="http://www.sysarthotspot.fi" data-text="@SysartHotspot " data-count="none">Tweet</a><script type="text/javascript" src="http://platform.twitter.com/widgets.js"></script>
+                 </div>
+
+                 <div class="twitterwidget">
+                     <script src="http://widgets.twimg.com/j/2/widget.js"></script>
+                     <script>
+                         new TWTR.Widget({
+                         version: 2,
+                         type: 'profile',
+                         rpp: 4,
+                         interval: 30000,
+                         width: 500,
+                         height: 200,
+                         theme: {
+                         shell: {
+                         background: '#ffffff',
+                         color: '#333333'
+                         },
+                         tweets: {
+                         background: '#ffffff',
+                         color: '#333333',
+                         links: '#cf5300'
+                         }
+                         },
+                         features: {
+                         scrollbar: false,
+                         loop: false,
+                         live: true,
+                         hashtags: true,
+                         timestamp: false,
+                         avatars: true,
+                         behavior: 'all'
+                         }
+                         }).render().setUser('SysartHotspot').start();
+                     </script>
+                 </div>
+                 <div class="footer"></div>
+             </div>
+
+
+             <div class="2010-2">
+                 <h2>Jimmy Nilsson</h2>
+
+                 <div class="image-container right">
+                     <img src="images/jimmy_nilsson.jpg" alt="Jimmy Nilsson"/>
+
+                     <div class="title">Jimmy Nilsson Helsingissä 26.10.2010</div>
+                 </div>
+
+                 <p class="summary">Jimmy Nilsson houkutteli runsaan osallistujajoukon Helsingissä 26.10.2010 ja Oulussa
+                     27.10.2010 pidettyihin Sysart Hotspot -tapahtumiin. Spontaanien kommenttien perusteella päivä
+                     tarjosi paljon ajatuksia ja ideoita omiin projekteihin.</p>
+
+                 <p>Aamupäivän esityksessään "From requirements to code" Jimmy näytti runsaiden esimerkkien avulla
+                     kuinka vaatimuksista rakennetaan helposti testattava domain-malli. Jimmy painotti erityisesti
+                     koodin ja puhutun kielen välisen kuilun kaventamista ja jopa koodin kirjoittamista natiivikielellä.
+                     Tätä näkemystä ei osallistujien keskuudessa varuksetta hyväksytty ja aihe herättikin kiihkeän
+                     keskustelun ja open space -session.</p>
+
+                 <div class="image-container">
+                     <img src="http://www.sysart.fi/uploads/images/devblogi/Jimmy vaatimusten parissa.jpg" alt="" width="400" height="300"/>
+                     <div class="title">Jimmy työstämässä esimerkkiapplikaation vaatimuksia</div>
+                 </div>
+
+                 <div class="image-container">
+                     <img src="http://www.sysart.fi/uploads/images/devblogi/Oulun yleisö.jpg" alt="" width="400" height="300"/>
+                     <div class="title">Oulun tilaisuuden yleisöä</div>
+                 </div>
+
+                 <p>Iltapäivän ohjelmassa oli kolme mielenkiintoista ja aamupäivän aiheita syventävää esitystä. Marko
+                     Oikarinen ja Daniel Wellner puhuivat arvo-objekteista sekä mille tasolle domain-maliissa
+                     esimerkiksi datan validointi pitäisi sijoittaa. Esitys ja sen materiaali on ladattavissa <a
+                             title="Markon ja Danielin materiaali"
+                             href="http://www.sysart.fi/uploads/downloads/Sysart-Hotspot_Do-you-trust-your-domain-objects.pdf"
+                             target="_blank">täältä</a>. Ville Oikarinen puolestaan demosi luonnolliseen kieleen
+                     perustuvaa testauskieltä. Villen koodi oheisessa <a title="Villen materiaali"
+                                                                         href="http://gluent.sourceforge.net"
+                                                                         target="_blank">linkissä</a>. Lopuksi Pertti
+                         Erkkilä esitteli helppokäyttöisen periaatteen suorituskykyisten tietokantaintensiivisten
+                         sovellusten rakentamiseksi. Ohessa Pertin <a title="Domain design principle"
+                                                                      href="http://www.sysart.fi/uploads/downloads/Domain design principle.pdf"
+                                                                      target="_blank">esitys</a> ja <a
+                                 title="Pertin koodi" href="http://www.sysart.fi/uploads/downloads/hotspot-workspace.zip" target="_blank">lähdekoodi</a>.
+                 </p>
+
+                 <p>Iltapäivän esitysten kanssa rinnan pyöri open spacet. Näissä käsiteltyjä aiheita olivat muun muassa
+                     "kuinka päästä alkuun DDD:n kanssa, jos työskentelee hankalan legacy-koodin kanssa?", sekä jo
+                     Jimmyn esityksen aikana paljon keskustelua herättänyt natiivikielen käyttö vaatimuksissa ja
+                     koodissa.</p>
+
+                 <div class="image-container">
+                     <img src="http://www.sysart.fi/uploads/images/devblogi/Open spacet.jpg" alt="" width="400" height="300"/>
+                     <div class="title">Open spaceissa käytiin tiiviitä keskusteluja</div>
+                 </div>
+
+                 <p>Keräsimme taas osallistujilta palautetta seminaarien annista ja saimmekin arvokkaita vinkkejä
+                     tulevaa Hotspotia varten. Palautelomakkeen täyttäneiden kesken arvotut elämyslahjakortit voittivat
+                     tällä kertaa Antti Kirjavainen, Aki Arvio, Tuomas Jomppanen, Eetu Huisman ja Antti Holvikari.</p>
+
+                 <p>Kiitoksia kaikille Sysart Hotspotiin osallistuneille ja tavataan jälleen ensi vuonna uuden tapahtuman
+                     merkeissä.</p>
+                 <div class="footer"></div>
+             </div>
+
+
+             <div class="2010-1">
+                 <h2>Steve Freeman</h2>
+
+                 <p class="summary">Maanantaina 10.5.2010 järjestettiin ensimmäinen Sysart Hotspot -seminaari pääesiintyjänä Steve
+                     Freeman. Tilaisuus houkutteli paikalle runsaslukuisen yleisön ja palautteen perusteella iltapäivä
+                     oli erittäin onnistunut.</p>
+
+                 <p>Seminaari alkoi Steve Freemanin esityksellä aiheesta "Sustainable TDD". Steve toi painokkaasti
+                     esille, että yksikkötestien koodi on yhtälailla kehittämistä kuin muukin koodi. Yksikkötestien
+                     koodin laatuun ja arkkitehtuuriin panostamalla saadaan parannettua testien kattavuutta ja
+                     kehityksen ketteryyttä. Erityisesti Steve painotti testikoodin luettavuutta - on helposti
+                     ymmärrettävä mitä testi tekee ja miksi se ei mene läpi.</p>
+
+                 <p><img src="http://www.sysart.fi/uploads/images/devblogi/Steve puhumassa.jpg" alt="" width="400" height="267"/><br/><em>Steven
+                     esittää näkemyksensä kompleksisen testidatan luomisesta</em></p>
+
+                 <p>Kahvi- ja verkostoitumistauon jälkeen vuorossa olivat Open Spacet. Aiheiksi muodostuivat Gui
+                     testing, Refactoring tests, Testing large &amp; complex systems, Testing legacy code sekä Unit
+                     testing vs integration testing. Porukka jakaantui kyseisten otsikoiden ympärille viiteen ryhmään
+                     keskustelemaan aiheesta. Mikäli äänen voluumia voi käyttää mittarina, keskustelut vaikuttivat
+                     erittäin kiinnostavilta.</p>
+
+                 <div class="image-container">
+                     <img src="http://www.sysart.fi/uploads/images/devblogi/Open Space.jpg" alt="" width="400" height="600"/>
+                     <div class="title">Open Space aiheiden valinta</div>
+                 </div>
+                 <p>Lisää kuvia tapahtumasta löytyy <a title="Hotspot kuvat Facebookissa"
+                                                       href="http://fi-fi.facebook.com/album.php?aid=23324&amp;id=120235691324761"
+                                                       target="_blank">Facebookista</a>.</p>
+                 
+                 <p>Kysyimme osallistujilta palautetta tilaisuuden annista ja saimmekin kiitettävästi kehitysehdotuksia
+                     seuravaa Hotspotia varten. Palautelomakkeen täyttäneiden kesken arvoimme kolme elämyslahjakorttia.
+                     Tällä kertaa onnettaren suosikkeja olivat Sami Hyytiäinen, Timo Harstela ja Aki Koskinen.</p>
+
+                 <p>Kiitoksia kaikille Sysart Hotspotiin osallistuneille ja tavataan jälleen syksyllä uuden tapahtuman
+                     merkeissä.</p>
+                 <div class="footer"></div>
+             </div>
+         </div>
+
+         <div id="share">
+         </div>
+
+         <div id="footer">
+             <span id="logo">
+                 <a href="http://www.sysart.fi"><img src="images/logo-small.png" alt="Sysart logo"/></a>
+             </span>
+         </div>
+    </div>
+</html>

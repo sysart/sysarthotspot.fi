@@ -1,0 +1,4 @@
+# disable caching for dynamic files
+<FilesMatch ".(css|html)$">
+Header set Cache-Control: "max-age=0, no-store"
+</FilesMatch> 
