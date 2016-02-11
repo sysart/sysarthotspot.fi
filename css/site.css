@@ -4,7 +4,7 @@ body {
   margin-left:auto;
   margin-right: auto;
   background: white;
-  font: 12px Arial, Helvetica, sans-serif;
+  font: 14px Arial, Helvetica, sans-serif;
   color: #333;
 }
 
@@ -85,10 +85,17 @@ a {
 }
 
 #site {
-  width: 896px;
+  min-width: 480px;
   margin-left: auto;
   margin-right: auto;
   padding: 72px 48px 84px;
+}
+
+#sitelogo {
+   display: block;
+   margin-left: auto;
+   margin-right: auto;
+   width: 80%;
 }
 
 
@@ -129,7 +136,7 @@ div.left {
 }
 
 .large, h2 {
-	font-size: 42px;
+	font-size: 36px;
 	line-height: 48px;
 	margin-top: 15px;
 	margin-bottom: 15px;
