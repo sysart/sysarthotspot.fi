@@ -35,7 +35,7 @@
 
        activate($("#navigation").children().first().attr("id"));
 
-       
+
      });
    </script>
     <script type="text/javascript">
@@ -52,7 +52,7 @@
 
     </script>
 
-    
+
      <div id="rekry">
          <a href="http://www.sysart.fi/#ura"><img src="images/rekry.gif" alt=""/></a>
      </div>
@@ -98,7 +98,7 @@
                         <li>Ongelmien ratkaisu tuotannossa</li>
                     </ul>
                  </p>
-                 
+
                  <p>
                      Yhdeksi pääteemaksi keskustelussa nousi tiedon merkityksen muuttuminen ja vääristyminen.
                      Tiedettiin tapauksia joissa tiedon merkitys vaihtuu (“nimi” tarkoitti ennen etunimeä, nyt
@@ -108,36 +108,36 @@
                      tontti puhtaana. Context mapping on yksi työkalu integroidun kokonaisuuden ymmärtämiseen:
                      <a href="https://www.youtube.com/watch?v=yPvef9R3k-M">Eric Evans / GOTO Berlin 2015</a>
                  </p>
-                 
+
                  <p>
                      Huonolaatuinen tai epäkelpo data ja sen käsittely herätti myös paljon keskustelua. Erilaisia paikkoja joista käyttäjä voi syöttää tietoja on paljon. Integraation kautta tuleva tieto ei ole välttämättä kunnolla validoitu lähdejärjestelmässä. Konfiguraatioparametritkin ovat käyttäjän syötteitä (admin on myös käyttäjä).
                  </p>
-                 
+
                  <p>
                      Pohdittiin pitäisikö järjestelmän räjähtää näyttävästi heti kun tulee virheellistä dataa jotta vältytään sen levittämiseltä? Tämä nopeuttaa integraatio-ongelmien löytämistä. Mutta miten hoidetaan tilanne jossa sama, mahdollisesti virheellinen data menee myös muille, ulkopuolisille järjestelmille, jolloin oma järjestelmä jää ilman kyseistä tietoa? Järjestelmä joka on ollut vuosia käytössä pitää todennäköisesti sisällään epäkelpoa dataa ja kun tähän integroidaan uusia osia, joudutaan huonon datan ongelmalle tekemään jotain. Mahdollisia ratkaisuvaihtoehtoja ovat ainakin datan siivous tai vaihtoehtoisesti epäkelvon datan kanssa eläminen ottamalla se huomioon mallinnuksessa.
                  </p>
-                     
+
                  <p>
                      Soveltuuko <a href="https://en.wikipedia.org/wiki/Robustness_principle">Robustness principle</a> integraatioihin? Periaate on peräisin internetin alkuajoilta kun oli vaikeuksia saada matalan tason verkkoprotokollat toimimaan eri pelureiden kesken. Robustness principle sanoo: "code that receives input should accept non-conformant input <b>as long as the meaning is clear</b>". Toisaalta, miksi hyväksyä edes osittain viallisia syötteitä? Viallinen syötehän on oire lähettävässä järjestelmässä olevasta bugista. Kehitys ja testausvaiheessa validointi voi olla tarkempaa jotta ongelmat löydetään nopeasti. On helpompaa pitää ensin tiukka linja syötteiden suhteen ja höllentää tarvittaessa kuin toisinpäin.
                  </p>
-                 
+
                  <p>
                      Työkaluksi rajapintojen oikean toiminnan varmistamiseen mainittiin
                      <a href="https://www.thoughtworks.com/radar/techniques/consumer-driven-contract-testing">consumer-driven contract testing</a>.
                      Keskustelussa todettiin että tämä onnistuu kyllä oman talon sisällä. Hankalampaa on kun palveluiden omistajat ovat eri yrityksiä.
                  </p>
-                 
+
                  <p>
                      Juttelimme myös siitä, miten integroituja kokonaisuuksia saadaan kasattua testi ja koulutuskäyttöä varten. Yleensä kokonaisuus sisältää muutamia hankalia palikoita joita ei vain ole mahdollista saada testiympäristöön (lisenssit, asennuksen vaikeus, tms.). Tällaisissa tapauksissa voidaan käyttää ns. mock-toteutusta kyseisestä palikasta (toim. huom: korrektimpi termi olisi "fake"). Mock-toteutuksia voidaan käyttää muuhunkin kuin testaamiseen. Eräässä tapauksessa tehtiin alunperin testaustarkoitukseen luotuun mock-palveluun vain pari pientä lisäystä jolloin se kelpasi koulutusympäristön tarpeisiin ja käyttäjille saatiin kokonaisuus käyttäytymään oikealla tavalla.
                  </p>
-                     
+
                  <p>
                      Valtuutusten, roolien ja tunnistautumisen hallinta eri järjestelmien välillä on muodostumassa ongelmaksi.
                      Valtuutuksilla tarkoitetaan tilannetta, jossa toinen toimija valtuutetaan tekemään asioita käyttäjän
                      puolelta. Tämä tilanne on hyvin yleinen viranomaisten kanssa toimiessa. Kansallinen palveluarkkitehtuuri
                      sisältää roolien ja valtuutuksien hallinnan, mutta kokemusten mukaan tämä on hankala käyttää.
                      <a href="http://vm.fi/roolit-ja-valtuudet">Valtiovarainministeriö / Roolit ja valtuudet</a>
-                 </p>    
+                 </p>
 
                  <a href="https://twitter.com/share" class="twitter-share-button" data-url="http://sysarthotspot.fi/" data-text="Tosielämän Tetristä" data-via="SysartOy">Tweet</a>
     <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
@@ -210,7 +210,7 @@
                  </p>
 
                  <h3>Sijainti</h3>
-                 
+
                  <iframe width="890" height="400" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="http://maps.google.com/maps?f=q&amp;source=s_q&amp;hl=fi&amp;geocode=&amp;q=Scandic+Simonkentt%C3%A4,+Simonkatu,+Helsinki,+Finland&amp;aq=0&amp;sll=37.0625,-95.677068&amp;sspn=67.713932,135.263672&amp;vpsrc=6&amp;ie=UTF8&amp;hq=Scandic+Simonkentt%C3%A4,+Simonkatu,+Helsinki,+Finland&amp;ll=60.171745,24.936991&amp;spn=0.008538,0.038152&amp;z=15&amp;iwloc=A&amp;output=embed"></iframe><br /><small><a href="http://maps.google.com/maps?f=q&amp;source=embed&amp;hl=fi&amp;geocode=&amp;q=Scandic+Simonkentt%C3%A4,+Simonkatu,+Helsinki,+Finland&amp;aq=0&amp;sll=37.0625,-95.677068&amp;sspn=67.713932,135.263672&amp;vpsrc=6&amp;ie=UTF8&amp;hq=Scandic+Simonkentt%C3%A4,+Simonkatu,+Helsinki,+Finland&amp;ll=60.171745,24.936991&amp;spn=0.008538,0.038152&amp;z=15&amp;iwloc=A" style="color:#0000FF;text-align:left">Näytä suurempi kartta</a></small>
                  <p>Scandic Simonkenttä, Mansku kokoustila<br/>
                      Simonkatu 9, Helsinki</p>
@@ -239,12 +239,12 @@
                      keskustelun ja open space -session.</p>
 
                  <div class="image-container">
-                     <img src="http://www.sysart.fi/uploads/images/devblogi/Jimmy vaatimusten parissa.jpg" alt="" width="400" height="300"/>
+                     <img src="images/Jimmy vaatimusten parissa.jpg" alt="" width="400" height="300"/>
                      <div class="title">Jimmy työstämässä esimerkkiapplikaation vaatimuksia</div>
                  </div>
 
                  <div class="image-container">
-                     <img src="http://www.sysart.fi/uploads/images/devblogi/Oulun yleisö.jpg" alt="" width="400" height="300"/>
+                     <img src="images/Oulun yleisö.jpg" alt="" width="400" height="300"/>
                      <div class="title">Oulun tilaisuuden yleisöä</div>
                  </div>
 
@@ -252,16 +252,16 @@
                      Oikarinen ja Daniel Wellner puhuivat arvo-objekteista sekä mille tasolle domain-maliissa
                      esimerkiksi datan validointi pitäisi sijoittaa. Esitys ja sen materiaali on ladattavissa <a
                              title="Markon ja Danielin materiaali"
-                             href="http://www.sysart.fi/uploads/downloads/Sysart-Hotspot_Do-you-trust-your-domain-objects.pdf"
+                             href="downloads/Sysart-Hotspot_Do-you-trust-your-domain-objects.pdf"
                              target="_blank">täältä</a>. Ville Oikarinen puolestaan demosi luonnolliseen kieleen
                      perustuvaa testauskieltä. Villen koodi oheisessa <a title="Villen materiaali"
                                                                          href="http://gluent.sourceforge.net"
                                                                          target="_blank">linkissä</a>. Lopuksi Pertti
                          Erkkilä esitteli helppokäyttöisen periaatteen suorituskykyisten tietokantaintensiivisten
                          sovellusten rakentamiseksi. Ohessa Pertin <a title="Domain design principle"
-                                                                      href="http://www.sysart.fi/uploads/downloads/Domain design principle.pdf"
+                                                                      href="downloads/Domain design principle.pdf"
                                                                       target="_blank">esitys</a> ja <a
-                                 title="Pertin koodi" href="http://www.sysart.fi/uploads/downloads/hotspot-workspace.zip" target="_blank">lähdekoodi</a>.
+                                 title="Pertin koodi" href="downloads/hotspot-workspace.zip" target="_blank">lähdekoodi</a>.
                  </p>
 
                  <p>Iltapäivän esitysten kanssa rinnan pyöri open spacet. Näissä käsiteltyjä aiheita olivat muun muassa
@@ -270,7 +270,7 @@
                      koodissa.</p>
 
                  <div class="image-container">
-                     <img src="http://www.sysart.fi/uploads/images/devblogi/Open spacet.jpg" alt="" width="400" height="300"/>
+                     <img src="images/Open spacet.jpg" alt="" width="400" height="300"/>
                      <div class="title">Open spaceissa käytiin tiiviitä keskusteluja</div>
                  </div>
 
@@ -297,7 +297,7 @@
                      kehityksen ketteryyttä. Erityisesti Steve painotti testikoodin luettavuutta - on helposti
                      ymmärrettävä mitä testi tekee ja miksi se ei mene läpi.</p>
 
-                 <p><img src="http://www.sysart.fi/uploads/images/devblogi/Steve puhumassa.jpg" alt="" width="400" height="267"/><br/><em>Steven
+                 <p><img src="images/Steve puhumassa.jpg" alt="" width="400" height="267"/><br/><em>Steven
                      esittää näkemyksensä kompleksisen testidatan luomisesta</em></p>
 
                  <p>Kahvi- ja verkostoitumistauon jälkeen vuorossa olivat Open Spacet. Aiheiksi muodostuivat Gui
@@ -307,13 +307,10 @@
                      erittäin kiinnostavilta.</p>
 
                  <div class="image-container">
-                     <img src="http://www.sysart.fi/uploads/images/devblogi/Open Space.jpg" alt="" width="400" height="600"/>
+                     <img src="images/Open Space.jpg" alt="" width="400" height="600"/>
                      <div class="title">Open Space aiheiden valinta</div>
                  </div>
-                 <p>Lisää kuvia tapahtumasta löytyy <a title="Hotspot kuvat Facebookissa"
-                                                       href="http://fi-fi.facebook.com/album.php?aid=23324&amp;id=120235691324761"
-                                                       target="_blank">Facebookista</a>.</p>
-                 
+  
                  <p>Kysyimme osallistujilta palautetta tilaisuuden annista ja saimmekin kiitettävästi kehitysehdotuksia
                      seuravaa Hotspotia varten. Palautelomakkeen täyttäneiden kesken arvoimme kolme elämyslahjakorttia.
                      Tällä kertaa onnettaren suosikkeja olivat Sami Hyytiäinen, Timo Harstela ja Aki Koskinen.</p>
